@@ -1,0 +1,12 @@
+<main>
+  <p>Esta é a homepage</p>
+
+  <ul>
+    <app-cards-list
+      *ngFor="let user of usersList"
+      [name]="user.name"
+      [email]="user.email"
+      [job]="user.job"
+    ></app-cards-list>
+  </ul>
+</main>
