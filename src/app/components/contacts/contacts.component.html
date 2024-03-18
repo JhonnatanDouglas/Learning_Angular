@@ -1,1 +1,9 @@
-<p>contacts works!</p>
+<main>
+  <ul>
+    <app-cartao
+      *ngFor="let user of userslists2"
+      [name]="user.name"
+      [age]="user.age"
+    ></app-cartao>
+  </ul>
+</main>
