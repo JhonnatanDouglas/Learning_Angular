@@ -1,0 +1,6 @@
+<form (submit)="formSubmit($event)">
+  <input type="text" [formControl]="name" />
+  <input type="email" [formControl]="email" />
+  <textarea type="text" [formControl]="message"></textarea>
+  <button type="submit">Enviar mensagem</button>
+</form>
