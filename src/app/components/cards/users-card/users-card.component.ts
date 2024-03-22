@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input } from '@angular/core'
+import { TodoListService } from '../../../services/user.service'
 
 @Component({
   selector: 'app-users-card',
@@ -8,7 +9,13 @@ import { Component, Input } from '@angular/core';
   styleUrl: './users-card.component.css',
 })
 export class UsersCardComponent {
-  @Input() name!: string;
-  @Input() email!: string;
-  @Input() job!: string;
+  constructor(private todoService: TodoListService) {}
+
+  @Input() id!: string
+  @Input() title!: string
+  @Input() content!: string
+
+  handleClick() {
+    this.todoService.removeTodo(this.id)
+  }
 }

@@ -1,0 +1,5 @@
+<form class="flex flex-col gap-2" (submit)="formContentSubmit($event)">
+  <input class="p-2 border-2" type="text" placeholder="Titulo" [formControl]="title" />
+  <textarea class="p-2 border-2" type="text" placeholder="Conteudo" [formControl]="content"></textarea>
+  <button class="p-2 bg-blue-600 text-gray-200 font-medium" type="submit">Cadastrar Nota</button>
+</form>

@@ -1,6 +1,14 @@
 <main class="flex flex-col gap-2 py-10 px-5">
-  <h1>{{exemple}}</h1>
-  <ul class="flex flex-col gap-3">
-    <app-users-card *ngFor="let user of getUserList()" [name]="user.name" [job]="user.job" [email]="user.email"></app-users-card>
+  <h1>{{ exemple }}</h1>
+  <h2>Lista de Notas</h2>
+  <app-todo-form></app-todo-form>
+  <div class="flex flex-row gap-3 justify-between font-medium mt-5 text-lg" *ngIf="todoList.length > 0">
+    <p>Titulo</p>
+    <p>Conteudo</p>
+    <p>Remover Nota</p>
+  </div>
+  <ul class="flex flex-col gap-3 p-1" *ngIf="todoList.length > 0">
+    <app-users-card *ngFor="let todo of todoList" [title]="todo.title" [content]="todo.content"></app-users-card>
   </ul>
+  <p class="self-center mt-4 text-xl font-semibold" *ngIf="todoList.length === 0">Cadastre uma nota</p>
 </main>

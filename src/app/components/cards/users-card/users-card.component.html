@@ -1,5 +1,7 @@
-<li>
-  <p><span class="font-medium">nome: </span>{{ name }}</p>
-  <p><span class="font-medium">email: </span>{{ email }}</p>
-  <p><span class="font-medium">Trabalha com: </span>{{ job }}</p>
+<li class="flex flex-row gap-2 justify-between border-2 p-2">
+  <p>{{ title }}</p>
+  <p>{{ content }}</p>
+  <button class="p-1 rounded-sm bg-red-700 text-gray-100 font-medium self-end" (click)="handleClick()">
+    Deletar Nota
+  </button>
 </li>
