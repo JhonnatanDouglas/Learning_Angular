@@ -1,0 +1,17 @@
+<div>
+  <ul>
+    <app-cards-products
+      *ngFor="let product of listProducts"
+      [nameProduct]="product.name"
+      [priceProduct]="product.price"
+      [descriptionProduct]="product.description"
+    ></app-cards-products>
+  </ul>
+
+  <form (submit)="formProductSubmit($event)">
+    <input type="text" [formControl]="name" />
+    <input type="text" [formControl]="price" />
+    <input type="text" [formControl]="description" />
+    <button type="submit">Cadastrar Produto</button>
+  </form>
+</div>

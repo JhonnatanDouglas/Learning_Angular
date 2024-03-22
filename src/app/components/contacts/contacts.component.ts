@@ -2,11 +2,17 @@ import { Component } from '@angular/core';
 import { CartaoComponent } from '../cartao/cartao.component';
 import { CommonModule } from '@angular/common';
 import { ContactFormComponent } from '../forms/contact-form/contact-form.component';
+import { ProductFormComponent } from '../forms/product-form/product-form.component';
 
 @Component({
   selector: 'app-contacts',
   standalone: true,
-  imports: [CommonModule, CartaoComponent, ContactFormComponent],
+  imports: [
+    CommonModule,
+    CartaoComponent,
+    ContactFormComponent,
+    ProductFormComponent,
+  ],
   templateUrl: './contacts.component.html',
   styleUrl: './contacts.component.css',
 })
